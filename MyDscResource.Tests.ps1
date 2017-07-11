@@ -7,14 +7,14 @@ InModuleScope 'MyDscResource' {
         }
 
         BeforeEach {
-            $databaseMembershipClass = [MyDscResource]::New()
-            $databaseMembershipClass.DatabaseName = 'Database1'
-            $databaseMembershipClass.SqlServer = 'Server1'
+            $myDscResourceClass = [MyDscResource]::New()
+            $myDscResourceClass.DatabaseName = 'Database1'
+            $myDscResourceClass.SqlServer = 'Server1'
         }
 
         Context 'When the Get method is called' {
             It 'Should not throw an error' {
-                { $databaseMembershipClass.Get() } | Should Not Throw
+                { $myDscResourceClass.Get() } | Should Not Throw
 
                 Assert-MockCalled -CommandName Test-HelperFunction -Scope It -Times 1 -Exactly
             }
