@@ -2,7 +2,7 @@
 
 This is a mockup for testing a PowerShell DSC class-based resource
 
-## 1. Clone the repoistory
+## 1. Clone the repository
 
 To run this example, do the following.
 
